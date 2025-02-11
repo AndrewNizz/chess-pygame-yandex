@@ -1,0 +1,130 @@
+{
+  'response': {
+    'GeoObjectCollection': {
+      'featureMember': [
+        {
+          'GeoObject': {
+            'Point': {
+              'pos': '35.829036 '
+              '55.517821'
+            },
+            'boundedBy': {
+              'Envelope': {
+                'lowerCorner': '35.70708 '
+                '55.46387',
+                'upperCorner': '35.940624 '
+                '55.572217'
+              }
+            },
+            'description': 'Можайский '
+            'муниципальный '
+            'округ, '
+            'Московская '
+            'область, '
+            'Россия',
+            'metaDataProperty': {
+              'GeocoderMetaData': {
+                'Address': {
+                  'Components': [
+                    {
+                      'kind': 'country',
+                      'name': 'Россия'
+                    },
+                    {
+                      'kind': 'province',
+                      'name': 'Центральный '
+                      'федеральный '
+                      'округ'
+                    },
+                    {
+                      'kind': 'province',
+                      'name': 'Московская '
+                      'область'
+                    },
+                    {
+                      'kind': 'area',
+                      'name': 'Можайский '
+                      'муниципальный '
+                      'округ'
+                    },
+                    {
+                      'kind': 'vegetation',
+                      'name': 'Бородинский '
+                      'военно-исторический '
+                      'музей-заповедник'
+                    }
+                  ],
+                  'country_code': 'RU',
+                  'formatted': 'Россия, '
+                  'Московская '
+                  'область, '
+                  'Можайский '
+                  'муниципальный '
+                  'округ, '
+                  'Бородинский '
+                  'военно-исторический '
+                  'музей-заповедник'
+                },
+                'AddressDetails': {
+                  'Country': {
+                    'AddressLine': 'Россия, '
+                    'Московская '
+                    'область, '
+                    'Можайский '
+                    'муниципальный '
+                    'округ, '
+                    'Бородинский '
+                    'военно-исторический '
+                    'музей-заповедник',
+                    'AdministrativeArea': {
+                      'AdministrativeAreaName': 'Московская '
+                      'область',
+                      'SubAdministrativeArea': {
+                        'Locality': {
+                          'Premise': {
+                            'PremiseName': 'Бородинский '
+                            'военно-исторический '
+                            'музей-заповедник'
+                          }
+                        },
+                        'SubAdministrativeAreaName': 'Можайский '
+                        'муниципальный '
+                        'округ'
+                      }
+                    },
+                    'CountryName': 'Россия',
+                    'CountryNameCode': 'RU'
+                  }
+                },
+                'kind': 'vegetation',
+                'precision': 'other',
+                'text': 'Россия, '
+                'Московская '
+                'область, '
+                'Можайский '
+                'муниципальный '
+                'округ, '
+                'Бородинский '
+                'военно-исторический '
+                'музей-заповедник'
+              }
+            },
+            'name': 'Бородинский '
+            'военно-исторический '
+            'музей-заповедник',
+            'uri': 'ymapsbm1://geo?data=Cgo0MzY0NTU4Mzg2EskB0KDQvtGB0YHQuNGPLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0JzQvtC20LDQudGB0LrQuNC5INC80YPQvdC40YbQuNC_0LDQu9GM0L3Ri9C5INC-0LrRgNGD0LMsINCR0L7RgNC-0LTQuNC90YHQutC40Lkg0LLQvtC10L3QvdC-LdC40YHRgtC-0YDQuNGH0LXRgdC60LjQuSDQvNGD0LfQtdC5LdC30LDQv9C-0LLQtdC00L3QuNC6IgoN7lAPQhVAEl5C'
+          }
+        }
+      ],
+      'metaDataProperty': {
+        'GeocoderResponseMetaData': {
+          'found': '1',
+          'request': 'Государственный '
+          'исторический '
+          'музей',
+          'results': '10'
+        }
+      }
+    }
+  }
+}
