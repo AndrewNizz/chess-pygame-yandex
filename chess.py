@@ -1,9 +1,6 @@
 from PyQt6.QtWidgets import QMainWindow, QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QPlainTextEdit
 from PyQt6.QtCore import QTimer, Qt, QTime
 from PyQt6.QtGui import QImage, QPixmap, QPainter, QFont
-from PyQt6 import uic
-import io
-import pprint
 from copy import deepcopy
 import sys
 import csv
