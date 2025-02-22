@@ -671,6 +671,38 @@ class StartWindow(QMainWindow):
         event.accept()  # Закрываем первое окно
 
 
+class EndWindow(QMainWindow):
+    def __init__(self, winner):
+        super().__init__()
+        self.setWindowTitle("Конечный экран")
+        self.setGeometry(100, 100, 400, 400)
+
+        layout = QVBoxLayout()
+
+        container = QWidget()
+        container.setLayout(layout)
+        self.setCentralWidget(container)
+
+        self.text_lbl = QLabel(self)
+        self.text_lbl.resize(600, 400)
+        self.text_lbl.setText(winner)
+        self.text_lbl.setFont(QFont('Arial', 35))
+        self.text_lbl.setStyleSheet('''color: rgb(1, 1, 1);
+                                       text-align: center;''')
+        self.text_lbl.move(700 // 2 - self.text_lbl.width() // 2, 400 // 2 - self.text_lbl.height() // 2)
+
+    def keyPressEvent(self, event):
+        # Проверяем, была ли нажата клавиша пробела
+        self.closeEvent(event)
+        self.destroy()
+
+    def closeEvent(self, event):
+        # Создаем второе окно и показываем его
+        self.second_window = MainWindow()
+        self.second_window.show()
+        event.accept()
+
+
 class PygameWidget(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -788,6 +820,7 @@ class PygameWidget(QWidget):
             self.left_button_pressed = True
         elif event.button() == Qt.MouseButton.RightButton:
             self.left_button_pressed = True
+
     def mouseReleaseEvent(self, event):
         # Обработка отпускания левой кнопки мыши
         if event.button() == Qt.MouseButton.LeftButton:
@@ -865,9 +898,11 @@ class PygameWidget(QWidget):
 
         bo.draw_check_square(self.new_screen)
         if check_winner(black_king) or self.time_over_bl:
-            draw_text('WHITE WINS', 500, 500, self.new_screen)
+            self.end_window = EndWindow('WHITE WINS')
+            self.end_window.show()
         elif check_winner(white_king) or self.time_over_wh:
-            draw_text('BLACK WINS', 500, 500, self.new_screen)
+            self.end_window = EndWindow('BLACK WINS')
+            self.end_window.show()
 
         self.screen.blit(self.new_screen, (0, 0))
         # Обновляем виджет
